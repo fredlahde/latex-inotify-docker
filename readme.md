@@ -5,5 +5,5 @@
 Run like this:
 
 ```bash
-docker run -it --rm -v $PWD:/source  latex-inotify-docker:latest
+docker run -it --rm -v $PWD:/source fredlahde/latex-inotify-docker:latest
 ```
