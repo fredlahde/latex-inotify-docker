@@ -1,6 +1,6 @@
 FROM blang/latex:ubuntu
 
-RUN apt-get update && apt-get install -y inotify-tools
+RUN apt-get update && apt-get install -y inotify-tools biber
 COPY ./watch_files.sh /watch_files.sh
 
 WORKDIR /source
