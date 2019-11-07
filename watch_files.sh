@@ -21,6 +21,11 @@ latexmk -C
 biber main
 latexmk -cd -interaction=nonstopmode -pdf main.tex
 del
+
+if [ "$RUN_ONCE"  = "true" ]; then
+	exit 0
+fi
+
 inotifywait -m -r -e close_write --format '%w%f' "." | while read MODIFIED
 do
     if [[ $MODIFIED == *.tex ]] ;
