@@ -18,7 +18,9 @@ function del {
 }
 
 latexmk -C
-biber main
+if [ "$WITHOUT_BIBER"  = "false" ]; then
+    biber main
+fi
 latexmk -cd -interaction=nonstopmode -pdf main.tex
 del
 
@@ -31,8 +33,10 @@ do
     if [[ $MODIFIED == *.tex ]] ;
     then
 	latexmk -c
-	biber main
-        latexmk -cd -interaction=nonstopmode -pdf main.tex
+    if [ "$WITHOUT_BIBER"  = "false" ]; then
+        biber main
+    fi
+    latexmk -cd -interaction=nonstopmode -pdf main.tex
 	latexmk -c
 	del
     fi
