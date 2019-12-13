@@ -4,6 +4,7 @@ function del {
 	rm -rf auto/
 	find . -name '*.aux' -delete
 	find . -name '*.log' -delete
+	find . -name '*.lof' -delete
 	find . -name '*.nav' -delete
 	find . -name '*.out' -delete
 	find . -name '*.snm' -delete
