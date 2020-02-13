@@ -5,6 +5,7 @@ function del {
 	find . -name '*.aux' -delete
 	find . -name '*.log' -delete
 	find . -name '*.lof' -delete
+	find . -name '*.lot' -delete
 	find . -name '*.nav' -delete
 	find . -name '*.out' -delete
 	find . -name '*.snm' -delete
