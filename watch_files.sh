@@ -24,6 +24,8 @@ if [ "$WITHOUT_BIBER"  = "false" ]; then
     biber main
 fi
 latexmk -cd -interaction=nonstopmode -pdf main.tex
+latexmk -cd -interaction=nonstopmode -pdf main.tex
+latexmk -cd -interaction=nonstopmode -pdf main.tex
 del
 
 if [ "$RUN_ONCE"  = "true" ]; then
@@ -38,6 +40,8 @@ do
     if [ "$WITHOUT_BIBER"  = "false" ]; then
         biber main
     fi
+    latexmk -cd -interaction=nonstopmode -pdf main.tex
+    latexmk -cd -interaction=nonstopmode -pdf main.tex
     latexmk -cd -interaction=nonstopmode -pdf main.tex
 	latexmk -c
 	del
